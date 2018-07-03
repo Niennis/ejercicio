@@ -6,20 +6,24 @@ import { Route, Switch } from 'react-router-dom';
 import App from './components/App';
 import User from './components/user/user';
 import Recharge from './components/recharge/recharge';
+import PayMode from './components/recharge/payMode';
 import Caja from './components/recharge/cajavecina/cajaVecina';
 import RechargeHistory from './components/rechargehistory/rechargeHistory';
-import Services from './components/services/services';
-import ShopHistory from './components/shophistory/shopHistory';
+import Commerces from './components/commerces/commerces';
+import Transactions from './components/transactions/transactions';
+import Profile from './components/profile/profile';
 
 const AppRoutes = () =>
   <App>
     <Switch>
       <Route path="/user" component={User}/>
       <Route path="/recharge" component={Recharge}/>
+      <Route path="/paymode" component={PayMode}/>
       <Route path="/caja" component={Caja}/>
       <Route path="/history" component={RechargeHistory}/>
-      <Route path="/services" component={Services}/>
-      <Route path="/shopping" component={ShopHistory}/>
+      <Route path="/commerces" component={Commerces}/>
+      <Route path="/transactions" component={Transactions}/>
+      <Route path="/profile" component={Profile}/>
       <Route path="/" component={User}/>      
     </Switch>
   </App>

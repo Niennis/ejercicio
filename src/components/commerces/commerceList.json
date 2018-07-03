@@ -1,0 +1,52 @@
+{
+  "commerces": [
+    {
+      "name": "Amazon",
+      "image": "Amazon"
+    },
+    {
+      "name": "Ebay",
+      "image": "../../img/ebay.png"
+    },
+    {
+      "name": "Google Store",
+      "image": "../../img/google_play.png"
+    },
+    {
+      "name": "Steam",
+      "image": "../../img/steam.png"
+    },
+    {
+      "name": "Uber",
+      "image": "../../img/uber.png"
+    },
+    {
+      "name": "App Store",
+      "image": "../../img/appstore.png"
+    },
+    {
+      "name": "Aliexpress",
+      "image": "../../img/aliexpress.png"
+    },
+    {
+      "name": "Despegar.com",
+      "image": "../../img/despegar.png"
+    },
+    {
+      "name": "iTunes",
+      "image": "../../img/amazon.png"
+    },
+    {
+      "name": "Netflix",
+      "image": "../../img/netflix.png"
+    },
+    {
+      "name": "Spotify",
+      "image": "../../img/spotify.png"
+    },
+    {
+      "name": "PayPal",
+      "image": "../../img/paypal.png"
+    }
+  ]
+}

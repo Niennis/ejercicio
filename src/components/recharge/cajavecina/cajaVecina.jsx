@@ -1,71 +1,81 @@
 import React, { Component } from 'react';
-import { Row, Col, Glyphicon, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+import { Row, Col, Glyphicon } from 'react-bootstrap';
+// import { Link } from 'react-router-dom';
+import { TiCloudStorageOutline } from "react-icons/lib/ti";
+
+import Header from '../../header';
 
 import './cajavecina.css'
 
 class CajaVecina extends Component {
+  constructor({ title, goto }) {
+    super();
+    this.state = {
+      title: 'Pago con caja vecina',
+      goto: '/paymode'
+    }
+  }
   render() {
+    const { title } = this.state;
+    const { goto } = this.state;
     return (
       <div className="recharge">
-        <Row className="headerRe">
-          <Col xs={1} md={1}>
-            <Link to='/recharge'>
-              <Glyphicon glyph="chevron-left" className="back"/>
-            </Link>
-          </Col>
-          <Col xs={10} md={10}>
-            <h3>Pago con caja vecina</h3>
-            <h5>Tu saldo Finciero</h5>
-            <h3>US$ 19.05</h3>
-          </Col>
-        </Row>
-        <div className="cajaItem">
+        <Header title={title} goto={goto}></Header>
+        <div className="instructionsCont">
           <Row>
-            <Col xs={1} md={1}>        
-              <Glyphicon glyph="record" className="record"/> 
-            </Col>          
+            <Col xs={1} md={1}>
+              <Glyphicon glyph="record" className="record" />
+            </Col>
             <Col xs={10} md={10}>
               <p className="instructions">DIRÍGETE A TU CASA VECINA MÁS CERCANA.</p>
             </Col>
           </Row>
         </div>
-        <div className="cajaItem">
+        <div className="instructionsCont">
           <Row>
-            <Col xs={1} md={1}>        
-              <Glyphicon glyph="record" className="record"/> 
-            </Col>          
+            <Col xs={1} md={1}>
+              <Glyphicon glyph="record" className="record" />
+            </Col>
             <Col xs={10} md={10}>
               <p className="instructions">INFORMA QUE QUIERES PAGAR FINCIERO.</p>
             </Col>
           </Row>
         </div>
-        <div className="cajaItem">
+        <div className="instructionsCont">
           <Row>
-            <Col xs={1} md={1}>        
-              <Glyphicon glyph="record" className="record"/> 
-            </Col>          
+            <Col xs={1} md={1}>
+              <Glyphicon glyph="record" className="record" />
+            </Col>
             <Col xs={10} md={10}>
               <p className="instructions">DA NUESTRO CÓDIGO 12345.</p>
             </Col>
           </Row>
         </div>
-        <div className="cajaItem">
+        <div className="instructionsCont">
           <Row>
-            <Col xs={1} md={1}>        
-              <Glyphicon glyph="record" className="record"/> 
-            </Col>          
+            <Col xs={1} md={1}>
+              <Glyphicon glyph="record" className="record" />
+            </Col>
             <Col xs={10} md={10}>
               <p className="instructions">REALIZA EL PAGO.</p>
             </Col>
           </Row>
         </div>
-        <Row>
-          <Col xs={10} xsOffset={1}>
-            <h5>Recuerda enviar tu comprobante a</h5>
-            <h5 className="mailFinciero">pagos@finciero.com</h5>
-          </Col>
-        </Row>
+        <div className="instructionsCont">
+          <Row>
+            <Col xs={1} md={1}>
+              <Glyphicon glyph="record" className="record" />
+            </Col>
+            <Col xs={10} md={10}>
+              <p className="instructions">ENVÍA EL COMPROBANTE A</p>
+              <p className="mailFinciero">pagos@finciero.com</p>
+              <p className="instructions">O ENVÍALO DESDE AQUÍ <label htmlFor="ticket"><TiCloudStorageOutline className="uploadTicket"/></label>
+              <input type="file" name="" id="ticket" accept=".jpg, .jpeg, .png"/>
+              </p>
+            </Col>
+          </Row>
+        </div>
       </div>
     );
   }

@@ -12,12 +12,14 @@ class footer extends Component {
           <Row>
             <Col xs={3} md={3}>
               <Link to='/user'>
+              {/* <TiHomeOutline className="footerIcon"/> */}
                 <Glyphicon glyph="home" className="footerIcon"/>
               </Link>
             </Col>
             <Col xs={3} md={3}>
               <Link to='/recharge'>            
                 <Glyphicon glyph="usd" className="footerIcon"/>
+                {/* <TiDatabase className="footerIcon"/> */}
               </Link>
             </Col> 
             <Col xs={3} md={3}>

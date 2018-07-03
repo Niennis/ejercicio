@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
 // Components
-import Navbar from './navbar/navbar.jsx';
+// import Navbar from './navbar/navbar.jsx';
 import Content from './content/content.jsx';
 import Footer from './footer/footer.jsx';
 
@@ -19,7 +19,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Navbar/>
+        {/* <Navbar/> */}
         <Content body={ children }/>
         <Footer/>
       </div>

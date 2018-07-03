@@ -1,66 +1,47 @@
 // Dependencies
 import React, { Component } from 'react';
-import { Row, Col, Glyphicon, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import Header from '../header';
+
 // Assets
-import './recharge.css';
+import './payMode.css';
 
 class Recharge extends Component {
+  constructor({ title }) {
+    super();
+    this.state = {
+      title: 'Pago con caja vecina',
+      goto: '/user'
+    }
+  }
   render() {
+    const { title } = this.state;
+    const { goto } = this.state;
+
     return (
       <div className="recharge">
-        <Row className="headerRe">
-          <Col xs={1} md={1}>
-            <Button bsStyle="link" bsSize="large"><Glyphicon glyph="arrow-left" className="backToUser"/></Button>
-          </Col>
-          <Col xs={10} md={10}>
-            <h3>Crear recarga nueva</h3>
-            <h5>Tu saldo Finciero</h5>
-            <h3>US$ 19.05</h3>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={10} xsOffset={1}>
-            <h4>Conoce todas las formas de recargar tu tarjeta</h4>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={10} md={10} className="rechargeItem">
-            <p className="rechargeOp">Transferencia en línea</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={10} md={10} className="rechargeItem">
-            <p className="rechargeOp">BancoEstado en línea</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={10} md={10} className="rechargeItem">
-            <p className="rechargeOp">Pago en efectivo en ServiPag</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={10} md={10} className="rechargeItem">
-            <p className="rechargeOp">Pago en efectivo en ServiEstado</p>
-          </Col>
-        </Row>
-        <Link to='/caja'>        
+        <Header title={title} goto={goto}></Header>
+        <div className="quantity">
           <Row>
-            <Col xs={10} md={10} className="rechargeItem">
-              <p className="rechargeOp">Pago en efectivo en Caja Vecina</p>
+            <Col xs={12}>
+              <h2>¿Cuánto quiero cargar?</h2>
+              <h2>US$ <input type="number" placeholder="Ingresar cantidad en dólares" /></h2>
             </Col>
           </Row>
-        </Link>
-        <Row>
-          <Col xs={10} xsOffset={1}>
-            <h5>Recuerda enviar tu comprobante a</h5>
-            <h5 className="mailFinciero">pagos@finciero.com</h5>
-          </Col>
-        </Row>
+          <Row>
+            <Col xs={12}>
+              <Link to='/paymode'>
+                <Button bsStyle="info">Solicitar</Button>
+              </Link>
+            </Col>
+          </Row>
+        </div>
       </div>
     );
   }
 }
 
 export default Recharge;
+

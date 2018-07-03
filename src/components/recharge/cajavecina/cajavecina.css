@@ -1,10 +1,10 @@
-.cajaItem{
+.instructionsCont{
+  margin: 3vh auto;
+  border-radius: 1vh;
   width: 90vw;
-  margin: 1.5vh auto;
-  padding: 1vh;
-  background-color: lightgrey;
-  border-radius: 0.5vh;
-  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.19);   
+  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.19);
+  text-align: justify;
+     
 }
 
 .record{
@@ -24,4 +24,18 @@
   color: white;
   vertical-align: middle;
   margin-top: 1.2vh;
+}
+
+.mailFinciero{
+  color: #449faf;
+  font-weight: bold;
+}
+
+.uploadTicket{
+  font-size: 30px;
+  color: #449faf;
+}
+
+input[type="file"] {
+  display: none;
 }
