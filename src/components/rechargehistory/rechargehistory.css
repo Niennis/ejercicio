@@ -3,6 +3,10 @@
   text-align: justify;
 }
 
+.recharge:first-child{
+  margin-top: 11vh;  
+}
+
 .date{
   color: #8b40bf;
 }

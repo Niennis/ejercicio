@@ -4,8 +4,8 @@ import { Row, Col, Glyphicon } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Header = ({ title, goto }) => (
-  <div>
-    <Row className="headerRe">
+  <div className="headerRe">
+    <Row>
       <Col xs={1} md={1}>
         <Link to={ goto }>
           <Glyphicon glyph="chevron-left" className="backToUser" />

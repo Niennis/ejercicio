@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Glyphicon, Button } from 'react-bootstrap';
 import Header from '../header';
 
 import './transactions.css';
@@ -70,7 +70,7 @@ class Transactions extends Component {
             </Col>
           </Row>
         </div>
-        <div className="rechargeItem wait all" value="wait">
+        <div className="itemContainer wait all" value="wait">
           <Row>
             <Col xs={2} md={2}>
               <p>13/06</p>
@@ -83,7 +83,7 @@ class Transactions extends Component {
             </Col>
           </Row>
         </div>
-        <div className="rechargeItem success all">
+        <div className="itemContainer success all">
           <Row>
             <Col xs={2} md={3}>
               <p>11/06</p>
@@ -96,7 +96,7 @@ class Transactions extends Component {
             </Col>
           </Row>
         </div>
-        <div className="rechargeItem wait all">
+        <div className="itemContainer wait all">
           <Row>
             <Col xs={2} md={2}>
               <p>01/04</p>
@@ -109,7 +109,7 @@ class Transactions extends Component {
             </Col>
           </Row>
         </div>
-        <div className="rechargeItem success all">
+        <div className="itemContainer success all">
           <Row>
             <Col xs={2} md={2}>
               <p>02/03</p>

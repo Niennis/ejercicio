@@ -9,7 +9,7 @@ class User extends Component {
   render() {
    return(
     <div className="user">
-    <Navbar/>
+      <Navbar/>
       <Card/>
       <Menu/>
     </div>

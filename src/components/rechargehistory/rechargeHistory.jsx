@@ -28,7 +28,7 @@ class RechargeHistory extends Component {
     return (
       <div className="recharge">
         <Header title={title} goto={goto}></Header>
-        <div className="rechargeItem rechargeHistory">
+        <div className="itemContainer rechargeHistory">
           <Row className="date">
             <Col xs={4} md={4}>
               <p>24/06/2018</p>
@@ -56,7 +56,7 @@ class RechargeHistory extends Component {
             </Col>
           </Row>
         </div>
-        <div className="rechargeItem rechargeHistory">
+        <div className="itemContainer rechargeHistory">
           <Row className="date">
             <Col xs={4} md={4}>
               <p>14/06/2018</p>
@@ -87,7 +87,7 @@ class RechargeHistory extends Component {
             </Col>
           </Row>
         </div>
-        <div className="rechargeItem rechargeHistory">
+        <div className="itemContainer rechargeHistory">
           <Row className="date">
             <Col xs={4} md={4}>
               <p>9/06/2018</p>
