@@ -10,11 +10,18 @@ class Card extends Component {
   showData() {
     let showHide = document.getElementsByClassName('hiddenData');
     for (let i = 0; i < showHide.length; i++) {
+      
       if(showHide[i].hasAttribute('hidden')) {
-        showHide[i].removeAttribute('hidden')
+        showHide[i].removeAttribute('hidden');
+        setTimeout(function(){
+          showHide[i].setAttribute('hidden', true)
+        }, 2000);        
       }
       else {
-        showHide[i].setAttribute('hidden', true)
+        showHide[i].setAttribute('hidden', true);
+        setTimeout(function(){
+          showHide[i].removeAttribute('hidden')
+        }, 2000);        
       }
     }
   }

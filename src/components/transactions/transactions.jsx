@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Glyphicon, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import Header from '../header';
 
 import './transactions.css';
@@ -30,8 +30,7 @@ class Transactions extends Component {
     let selected = document.getElementsByClassName(this.state.value);
     for (let j = 0; j < selected.length; j++) {
       selected[j].removeAttribute('hidden');
-    }
-    
+    }    
     event.preventDefault();
   }
 
@@ -46,14 +45,13 @@ class Transactions extends Component {
             <form onSubmit={this.handleSubmit}>
               <label>
                 Mostrar
-                <select value={this.state.value} name="trans" id="" onChange={this.handleChange}>
+                <select value={this.state.value} name="trans" id="selectTrans" onChange={this.handleChange}>
                   <option value="all">Todos los movimientos</option>
                   <option value="success">Transacciones exitosas</option>
                   <option value="fail">Transacciones fallidas</option>
-                  <option value="wait">Transacciones en espera</option>
                 </select>
               </label>
-              <input type="submit" value="Send" />
+              <Button type="submit" value="Send" bsStyle="info">Cargar</Button>
             </form>
           </Row>
         </div>
@@ -70,7 +68,7 @@ class Transactions extends Component {
             </Col>
           </Row>
         </div>
-        <div className="itemContainer wait all" value="wait">
+        <div className="itemContainer fail all" value="fail">
           <Row>
             <Col xs={2} md={2}>
               <p>13/06</p>
@@ -96,7 +94,7 @@ class Transactions extends Component {
             </Col>
           </Row>
         </div>
-        <div className="itemContainer wait all">
+        <div className="itemContainer fail all">
           <Row>
             <Col xs={2} md={2}>
               <p>01/04</p>

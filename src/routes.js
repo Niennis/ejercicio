@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 // Components
 import App from './components/App';
+import Login from './components/login/login';
 import User from './components/user/user';
 import Recharge from './components/recharge/recharge';
 import PayMode from './components/recharge/payMode';
@@ -17,6 +18,7 @@ const AppRoutes = () =>
   <App>
     <Switch>
       <Route path="/user" component={User}/>
+      <Route path="/login" component={Login}/>
       <Route path="/recharge" component={Recharge}/>
       <Route path="/paymode" component={PayMode}/>
       <Route path="/caja" component={Caja}/>

@@ -1,13 +1,13 @@
 .comCont{
   background-color: lightgray;
-  margin: 1.2vh 0 0 1.2vh;
+  margin: 1.2vh 0 0 -1.2vh;
   width: 46vw;
   height: 46vw;
   border-radius: 2vh;
   position: relative;
 }
 
-.comCont:last-child{
+.commerceCont:last-child{
   margin-bottom: 10vh;
 }
 
@@ -19,4 +19,8 @@
   transform: translate(-50%, -50%);
   border-radius: 20%;  
   /* filter: grayscale(50%); */
+}
+
+.modalCont{
+  margin-top: 10vh !important;
 }

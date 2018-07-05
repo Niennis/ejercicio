@@ -41,8 +41,9 @@
   border-right: none;
   width: 55vw;
   border-radius: 1vh;
-  background-color: #ebe7e7;  
+  background-color: white;  
   margin: 4vh 0;
+  padding-left: 1vh;
   box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.19);  
 }
 
